@@ -6,8 +6,10 @@ topology:
       image: ceos:4.36.2F
   nodes:
     ceos1:
-      kind: ceos 
+      kind: ceos
+      privileged: true 
     ceos2:
       kind: ceos
+      privileged: true
   links:
     - endpoints: ["ceos1:eth1", "ceos2:eth1"]
